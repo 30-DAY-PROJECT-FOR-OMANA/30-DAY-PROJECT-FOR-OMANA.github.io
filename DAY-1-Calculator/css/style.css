@@ -1,0 +1,52 @@
+body {
+    display: flex;
+    justify-content: center;  /* Center horizontally */
+    align-items: center;      /* Center vertically */
+    height: 100vh;            /* Take the full viewport height */
+    margin: 0;                /* Remove default margin */
+}
+
+.calculator{
+    height: 667px;
+    width: 350px;
+    background-color: rgb(0, 0, 0);
+    border-radius: 10px;
+}
+#display{
+    width: 342px;
+    height: 250px;
+    background-color: rgb(108, 253, 253);
+    border-radius: 10px 10px 0 0;
+    display: flex;
+    justify-content: flex-end;
+    
+}
+.calc-row .btn{
+    height: 60px;
+}
+
+#display{
+    height: 100px;
+    width: 350px;
+    background: transparent;
+    margin-top: 150px;
+    cursor: pointer;
+    border: 0;
+    font-size: 40px;
+    text-align: right;
+    color: rgba(255, 255, 255, 0.637)
+}
+
+button{
+    margin: 5px;
+    width: 74px;
+    height: 73px;
+    border-radius: 5px;
+    background-color: transparent;
+    color: white;
+    border: 2px solid goldenrod;
+}
+
+.c-button{
+    width: 344px;
+}
