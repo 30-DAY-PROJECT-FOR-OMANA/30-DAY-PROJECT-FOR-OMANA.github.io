@@ -40,6 +40,7 @@ const quizData = [
         correct:'c'
     }
 ];
+const quizes = document.getElementById('quizes');
 const answerELs = document.querySelectorAll('.answer');
 const questionEl = document.getElementById('question');
 const a_text = document.getElementById('a_text');
@@ -98,8 +99,7 @@ submitBtn.addEventListener('click', () => {
             if(currentQuiz < quizData.length){
                 loadQuiz();
             } else {
-                //Todo: show result
-                alert('thank you');
+                quizes.innerHTML = '<h2>You got ${score}/${quizData.length}.</h2>' ;
                 }
         }   
 });
