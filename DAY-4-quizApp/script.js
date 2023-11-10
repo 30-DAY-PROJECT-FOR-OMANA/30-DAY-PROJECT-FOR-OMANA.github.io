@@ -1,3 +1,4 @@
+// Array of quiz questions and answers
 const quizData = [
     {
         question:'What is my Full Name ?',
@@ -40,73 +41,74 @@ const quizData = [
         correct:'c'
     }
 ];
-const quizes = document.getElementById('quizes');
-const answerELs = document.querySelectorAll('.answer');
-const questionEl = document.getElementById('question');
-const a_text = document.getElementById('a_text');
-const b_text = document.getElementById('b_text');
-const c_text = document.getElementById('c_text');
-const d_text = document.getElementById('d_text');
-const submitBtn = document.getElementById('submit');
+
+// Selecting DOM elements
+const quizesElement = document.getElementById('quizes');
+const answerElements = document.querySelectorAll('.answer');
+const questionElement = document.getElementById('question');
+const a_textElement = document.getElementById('a_text');
+const b_textElement = document.getElementById('b_text');
+const c_textElement = document.getElementById('c_text');
+const d_textElement = document.getElementById('d_text');
+const submitButton = document.getElementById('submit');
+
+// Variables to track the current quiz and score
 let currentQuiz = 0;
 let score = 0;
 
-
+// Initial load of the first quiz
 loadQuiz();
 
+// Function to load a quiz question
 function loadQuiz() {
-    deselectAnswer();
+    deselectAnswers();
 
-    const currentQuizData = quizData[currentQuiz]; 
+    const currentQuizData = quizData[currentQuiz];
 
-    questionEl.innerText = currentQuizData.question;
-
-    a_text.innerText = currentQuizData.a;
-    b_text.innerText = currentQuizData.b;
-    c_text.innerText = currentQuizData.c;
-    d_text.innerText = currentQuizData.d;
-
-    
+    questionElement.innerText = currentQuizData.question;
+    a_textElement.innerText = currentQuizData.a;
+    b_textElement.innerText = currentQuizData.b;
+    c_textElement.innerText = currentQuizData.c;
+    d_textElement.innerText = currentQuizData.d;
 }
 
+// Function to get the currently selected answer
 function getSelected() {
-     let answer = undefined;
+    let selectedAnswer = undefined;
 
-    answerELs.forEach((answerEL) => {
-        if(answerEL.checked) {
-            answer = answerEL.id;
+    answerElements.forEach((answerElement) => {
+        if (answerElement.checked) {
+            selectedAnswer = answerElement.id;
         }
     });
-    
-    return answer;
+
+    return selectedAnswer;
 }
-    function deselectAnswer() {
-        answerELs.forEach((answerEL) => {
-            answerEL.checked = false;
-        });
-    }
 
-submitBtn.addEventListener('click', () => {
-    //check to see the answer
-    const answer =  getSelected();
-    console.log(answer)
-    if(answer) {
+// Function to deselect all answers
+function deselectAnswers() {
+    answerElements.forEach((answerElement) => {
+        answerElement.checked = false;
+    });
+}
 
-        if(answer === quizData[currentQuiz].correct) {
+
+// Event listener for the submit button
+submitButton.addEventListener('click', () => {
+    const selectedAnswer = getSelected();
+
+    if (selectedAnswer) {
+        if (selectedAnswer === quizData[currentQuiz].correct) {
             score++;
         }
-            currentQuiz++;
-            if(currentQuiz < quizData.length){
-                loadQuiz();
-            } else {
-                quizes.innerHTML = '<h2>You got ${score}/${quizData.length}.</h2>' ;
-                }
-        }   
-});
 
-//function totalScore() {
-//    const totalScoreEl = document.getElementById('totalScore');
-//
-//    totalScoreEl.innerHTML = totalScore;
-//
-//}
+        currentQuiz++;
+
+        if (currentQuiz < quizData.length) {
+            loadQuiz();
+        } else {
+            quizesElement.innerHTML = `<h2>You scored ${score} out of ${quizData.length} questions.</h2> <button onClick = "location.reload()">Reload</button>`;
+
+        }
+    }
+});
