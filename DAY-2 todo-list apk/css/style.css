@@ -1,63 +1,127 @@
-html, body {
-    height: 100%; /* Make sure the html and body are full height */
-    margin: 0; /* Remove default margin */
-    padding: 0; /* Remove default padding */
-    box-sizing: border-box; /* Include padding and border in the element's total width and height */
-  }
-  
-  .container-box {
-    width: calc(100% - 20px); /* Calculate width as 100% of the viewport width minus 20px */
-    height: calc(100% - 20px); /* Calculate height as 100% of the viewport height minus 20px */
-    margin: 10px; /* Adds a margin of 10px on all sides */
-    padding: 10px; /* Optional: Adds padding inside the container */
-    box-sizing: border-box; /* Include padding and border in the element's total width and height */
-    /* Add any other styles you want for your container, like background */
-    background-color:rgb(3, 39, 39); /* Just an example to give it a visible background */
-    border-radius: 10px;
-    border: 5px solid rgb(128, 0, 0);
-  }
-  .name-box{
-    padding-top: 12px;
-    height: 100px;
-    background-color: white;
-    border-radius: 10px;
-  }
+.container{
+  display: grid;
+  max-width: 960px;
+  height: 720px;
+  grid-template-columns: 120px 120px 120px 120px 120px 120px 120px 120px ;
+  grid-template-rows: 120px 120px 120px 120px 120px 120px 120px 120px ;
+  background-color: rgb(0, 0, 0);
+}
 
-  .list-box h3{
-    color: blue;
-    padding-left: 20px;
-    padding-top: 20px;
-    margin: 0;
-    display: inline-block;
-    justify-content: space-between;
-  }
-  
-  .list-box{
-    height: 600px;
-    min-height: 90%;
-    background-color: aqua;
-    width:calc(100% - 70%);
-    margin-right: 20px;
-    margin-left: 8px;
-    border-radius: 10px;
-    
-  }
+aside{
+  background-color: rgb(46, 49, 49);
+  width: 100px;
+  border-radius: 10px;
+  margin: 10px 10px;
+  padding: 6px 6px;
+  grid-row: 1 /7;
+  grid-column: 1/ 2;
+}
 
-.plus-sign{
-    color: black;
-    background-color: aliceblue;
-    border-radius: 60px;
-    width: 10px;
-    height: 10px;
-    
-  }
- .list-box button{
-    border-radius: 10px;
-    border: none;
-    margin-left: 130px;
-    height: 25px;
-    width: 25px;
-    padding: 1px 2px;
-    background-color: black;
-    cursor: pointer;
-  }
+header{
+  grid-column: span 7;
+  grid-row: span 3;
+  margin: 15px 10px;
+  background-color: rgb(0, 101, 189);
+  border-radius: 10px;
+  
+}
+
+main{
+  grid-column: span 5;
+  grid-row: span 3;
+  background-color: black;
+  border-radius: 10px;
+  margin: 10px 10px;
+}
+
+nav{
+  grid-row: span 3;
+  grid-column: span 2;
+  background-color: white;
+  border-radius: 10px;
+  margin: 10px 10px;
+}
+
+.sidebar-container{
+  display: grid;
+  grid-template-columns: 100px;
+  grid-template-rows: 150px 100px 100px 250px 100px ;
+}
+
+.icon1{
+  color: wheat;
+  padding-top: 100px;
+  padding-left: 40px;
+  grid-column: 1/2;
+  grid-row: 1/1;
+  border-radius: 10px;
+}
+.icon1:hover{
+  color: white;
+  transition: 0.5s;
+  cursor: pointer;
+}
+.icon2{  color: wheat;
+  padding-top: 40px;
+  padding-left: 40px;
+  grid-row: span 1;
+  grid-column: span 1;
+  border-radius: 10px;
+}
+.icon2:hover{
+  color: white;
+  transition: 0.5s;
+  cursor: pointer;
+}
+.icon3{ padding-top: 40px;
+  padding-left: 40px;
+  grid-row: span 1;
+  grid-column: span 1;
+  border-radius: 10px;
+}
+.icon3:hover{
+  color: white;
+  transition: 0.5s;
+  cursor: pointer;
+}
+.icon4{
+  padding-top: 40px;
+  padding-left: 40px;
+  color: white;
+  grid-row: span 2;
+  grid-column: span 1;
+  border-radius: 10px;
+}
+.icon4:hover{
+  color: white;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.headers{
+  display: grid;
+  grid-template-columns: 215px 215px 215px 175px;
+  grid-template-rows: 70px 240px;
+}
+
+.greeting{
+  background-color: white;
+  grid-row:1/1;
+  grid-column: 1/ 4;
+  padding: 20px 10px 0 10px;
+  border-radius: 10px 0 0 0;
+}
+
+.time{
+  background-color: orange;
+  border-radius: 0 10px 0 0;
+  padding: 20px 0 30px 0;
+}
+
+.countdown-image{
+  display: grid;
+  grid-template-columns:215px 215px 215px 175px ;
+  grid-template-rows: 20px 200px 20px;
+  background-image: url()
+  width: 820px;
+}
