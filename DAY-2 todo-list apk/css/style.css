@@ -21,8 +21,9 @@ header{
   grid-column: span 7;
   grid-row: span 3;
   margin: 15px 10px;
-  background-color: rgb(0, 101, 189);
+  background-color: rgb(0, 0, 0);
   border-radius: 10px;
+  height: 310px;
   
 }
 
@@ -49,15 +50,20 @@ nav{
 }
 
 .icon1{
-  color: wheat;
-  padding-top: 100px;
-  padding-left: 40px;
+  margin: 110px 20px 20px 40px;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-top: 5px;
+  padding-bottom: 5px;
   grid-column: 1/2;
   grid-row: 1/1;
-  border-radius: 10px;
+  border-radius: 60px;
+  height: 20px;
+  width: 20px;
+  
 }
 .icon1:hover{
-  color: white;
+  background-color: white;
   transition: 0.5s;
   cursor: pointer;
 }
@@ -105,23 +111,40 @@ nav{
 }
 
 .greeting{
-  background-color: white;
+  background-color:  rgb(0, 0, 0);
   grid-row:1/1;
   grid-column: 1/ 4;
   padding: 20px 10px 0 10px;
   border-radius: 10px 0 0 0;
+  margin-bottom: 10px;
+  color: aliceblue;
+  font-size: 1rem;
+  font-family: 'Courier New', Courier, monospace;
 }
 
 .time{
-  background-color: orange;
+  background-color:  rgb(0, 0, 0);
   border-radius: 0 10px 0 0;
   padding: 20px 0 30px 0;
+  margin-bottom: 10px;
+  color: aliceblue;
+  font-size: 1rem;
+  font-family: 'Courier New', Courier, monospace;
 }
 
 .countdown-image{
-  display: grid;
-  grid-template-columns:215px 215px 215px 175px ;
-  grid-template-rows: 20px 200px 20px;
-  background-image: url()
+  background-image: url(/new.png);
   width: 820px;
+  border-radius: 10px 10px 10px 10px;
+  border: 3px solid white;
+  box-shadow: rgb(11, 121, 165) 1
 }
+
+section{
+  background-color: rgb(255, 255, 255);
+  height: 2000px;
+  width: 2000px;
+  justify-content: center;
+  
+}
+
