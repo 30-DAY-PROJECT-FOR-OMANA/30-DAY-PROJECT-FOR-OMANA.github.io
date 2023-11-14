@@ -10,7 +10,7 @@
 </head>
 <body>
    
-    <div class="container">
+    <div class="container container-grid">
         <aside>
             <div class="sidebar-container">
                 <div class="icon1"><i class="fa-solid fa-house" style="color: #000000;"></i></div>
@@ -19,19 +19,22 @@
                 <div class="icon4"><i class="fa-solid fa-note-sticky" style="color: #1e53ae;"></i></div>
             </div>
         </aside>
+        <main class="main-content">
         <header class="headers">
             <div class="greeting">Hi, Helene</div>
             <div class="time">16:53 AM</div>
+        </header>
             <div class="countdown-image countdown-style">
               <div class="countdown-box box-grid">
                 <div class="hours"></div>
                 <div class="minutes"></div>
                 <div class="seconds"></div>
               </div>
+              <div class="task-countdown-text">This task is up in:</div>
             </div>
         
-        </header>
-        <main class="main-content">
+        
+        
             
             <div class="main-header">Cards</div>
                 <div class="card-1">
@@ -62,12 +65,13 @@
             <section class="task-list">
                 <!-- Dynamic task list will be rendered here -->
             </section>
-        </main>
+        
         <nav class="bottom-nav">
             <button class="nav-btn notes">Notes</button>
             <button class="nav-btn reminders">Reminders</button>
             <button class="nav-btn personal">Personal</button>
         </nav>
+    </main>
     </div>
 
 </body>
