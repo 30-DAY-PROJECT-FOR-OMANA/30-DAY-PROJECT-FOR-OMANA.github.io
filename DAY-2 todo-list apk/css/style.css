@@ -1,15 +1,13 @@
 .container{
   display: grid;
-  max-width: 960px;
-  height: 720px;
-  grid-template-columns: 120px 120px 120px 120px 120px 120px 120px 120px ;
-  grid-template-rows: 120px 120px 120px 120px 120px 120px 120px 120px ;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr ;
+  grid-template-rows:1fr 1fr 1fr 1fr 1fr 1fr  ;
   background-color: rgb(0, 0, 0);
+  border-radius: 10px;
 }
 
 aside{
   background-color: rgb(46, 49, 49);
-  width: 100px;
   border-radius: 10px;
   margin: 10px 10px;
   padding: 6px 6px;
@@ -18,12 +16,11 @@ aside{
 }
 
 header{
-  grid-column: span 7;
+  grid-column: 2/9;
   grid-row: span 3;
   margin: 15px 10px;
   background-color: rgb(0, 0, 0);
   border-radius: 10px;
-  height: 310px;
   
 }
 
@@ -106,14 +103,14 @@ nav{
 
 .headers{
   display: grid;
-  grid-template-columns: 215px 215px 215px 175px;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   grid-template-rows: 70px 240px;
 }
 
 .greeting{
   background-color:  rgb(0, 0, 0);
   grid-row:1/1;
-  grid-column: 1/ 4;
+  grid-column: 1/ 5;
   padding: 20px 10px 0 10px;
   border-radius: 10px 0 0 0;
   margin-bottom: 10px;
@@ -123,6 +120,8 @@ nav{
 }
 
 .time{
+  grid-row: 1/1;
+  grid-column: 9/5;
   background-color:  rgb(0, 0, 0);
   border-radius: 0 10px 0 0;
   padding: 20px 0 30px 0;
@@ -132,13 +131,17 @@ nav{
   font-family: 'Courier New', Courier, monospace;
 }
 
+.countdown-style{
+  grid-row: 2/2;
+  grid-column: 1/9;
+
+}
 .countdown-image{
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr 4fr 1fr;
   background-image: url(/new.png);
-  background-position:center;
-  width: 800px;
+  
   border-radius: 10px 10px 10px 10px;
   border: 3px solid white;
 }
