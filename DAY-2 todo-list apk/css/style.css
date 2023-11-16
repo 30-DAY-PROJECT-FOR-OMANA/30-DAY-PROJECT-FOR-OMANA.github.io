@@ -437,6 +437,11 @@ container-edit{
 }
 .close-display{
   grid-column: 2/3;
+  color: #0c6e74;
+  padding-left: 220px;
+  margin: 10px;
+  font-size: 1.5rem;
+  cursor: pointer;
 }
 .types{
   grid-row: 2/3;
@@ -525,7 +530,7 @@ container-edit{
   font-size: 1rem;
   background-color:#FFCB9A;
   padding: 3px;
-  border-radius: 3px;
+  border-radius: 5px;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 @media only screen and (max-width: 768px) {

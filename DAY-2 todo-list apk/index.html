@@ -28,8 +28,9 @@
         </header>
             <div class="countdown-image countdown-style">
               <div class="countdown-box box-grid">
-                <div class="hours"></div>
-                <div class="minutes"></div>
+                <div id="overdueCount">Overdue Tasks: 0</div>
+                <div id="completedCount">Completed Tasks: 0</div>
+
                 <div class="seconds"></div>
               </div>
               <div class="task-countdown-text">This task is up in:</div>
@@ -46,32 +47,35 @@
                 <div class="card-1 card-1-style" id="add-task">
                     <button class="add-button" id="add-button">Add</button>
                     <div class="container-edit" id="close-display">
+                        <form action="">
                     <div class="new-task-display to-display " id="new-task">
                         
                         <section class="new-task-type">Select Type</section>
-                        <span class="close-display">&times;</span>
+                        <button><span class="close-display">&times;</span></button>
                         <div class="types type-button">
                             <button class="task-type-button">Task</button>
                             <button class="note-type-button">Notes</button>
                             <button class="reminder-type-button">Reminder</button>
                         </div>
                         <div class="type-name">
-                            <input type="text" class="type-name-holder" placeholder="Name..." required>
+                            <input type="text" id="cardname" class="type-name-holder" placeholder="Name..." required>
                         </div>
                         <div class="info">
-                            <input type="text" class="info-holder" placeholder="This is about">
+                            <input type="text" id="cardinfo" class="info-holder" placeholder="This is about">
                         </div>
                         <div class="timeout">
                             To be completed ?
-                            <input type="date" class="date-timeout">
+                            <input type="date" class="date-timeout" id="task-deadline">
                         </div>
+                        <input type="color" id="cardColor" name="cardColor">
                         <div class="set-alert">Set alert
                             <input type="radio">Yes
                             <input type="radio">No
                         </div>
-                        <div class="create-button" id="create-button">
-                            <button>Create</button></div>
+                        <div class="create-button" id="create-button" >
+                            <button type="submit">Create</button></div>
                     </div>
+                </form>
                 </div>
             </div>
                 <div class="card-2 cards " draggable="true" id="drag2">
